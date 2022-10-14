@@ -29,7 +29,10 @@
         
     <div id="navlist" class="d-flex" >
     <div>
-        <a href="#">Add</a>
+        
+<a href="#" class="open-button" onclick="openForm()">Add</a>
+
+
         <a href="#">Add Meta</a>
         <a href="#">Delete</a>
         <a href="#">Duplicate</a>
@@ -124,7 +127,86 @@
     </div><!-- .footer -->
  
 </div><!-- .wrap -->
- 
+ <!-- The form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+
+    <div class="header">
+        <div class="add">
+                <label >Add Iteams</label>
+        </div>
+        <div class="x">
+                <label onclick="CancleDetails()">X</label>
+        </div>
+    </div>
+    <div class="modal-body">
+    <div class="container1">
+            <div class="row">
+                <div class="col-10">
+                    <label for="item">ITEM:</label>
+                    <input type="text" id="item" name="item">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="package">PACKAGE:</label>
+                    <input type="text" id="package" name="package">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="quantity">QUANTITY:</label>
+                    <input type="number" id="quantity" name="quantity">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="mrp">MRP:</label>
+                    <input type="number" id="mrp" name="mrp">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                <label for="landing">LANDING:</label>
+                    <input type="number" id="landing" name="landing">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                <label for="total">TOTAL:</label>
+                    <input type="number" id="total" name="total">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="margin">MARGIN:</label>
+                    <input type="number" id="margin" name="margin">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                <label for="part_number">PARTNUMBER:</label>
+                    <input type="number" id="part_number" name="part_number">
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-10">
+                    <label for="item">COMMENT:</label>
+                    <input type="text" id="comment" name="comment">
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="foter">
+            <div class="add-btn">
+                <input type="submit" value="Add" onclick="SaveDetails()">
+                </div>
+                <div class="cancle-btn">
+                <input type="submit" value="Cancle" onclick="CancleDetails()">
+            </div>  
+    </div>
+  </form>
+</div>
 </body>
 <script>
     $(document).ready(function(){
@@ -146,5 +228,13 @@
     $('.menu-btn').css("visibility", "visible");
     });
     });
+
+    function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 </script>
 </html>

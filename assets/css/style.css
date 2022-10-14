@@ -418,3 +418,82 @@ body {
         text-align: center;
     }
 }
+.form-popup {
+    width:748px;
+    max-width: 100%;
+    background-color:rgb(233, 233, 233);
+    border: 1px solid #99bce8;
+    border-width: 1px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+}
+.form-container {
+    width:100%;
+    height:auto;
+  background-color: rgb(226, 226, 226);
+}
+.form-container input[type=text], .form-container input[type=password] {
+  width: 75%;
+  padding: 10px;
+  margin: 3px 0 20px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .cancel {
+  background-color: red;
+}
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.form-popup .header , .form-popup .foter{
+    width: 100%;
+    min-height: 35px;
+    background-color: #99bce8;
+    border: 1px solid #99bce8;
+    justify-content: space-between;
+}
+.form-popup .form-container{
+    background-color:white;
+    border: 1px solid #99bce8;
+}
+.form-popup .modal-body{
+    min-height: 100px;
+}
+
+.form-popup .modal-body input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+    width: 60%;
+    min-height: 25px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 0px;
+    resize: vertical;
+}
+.form-popup .modal-body textarea{
+    width:40%;
+    padding: 5px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+}
+.form-popup .modal-body .container1{
+    background-color:#f2f2f2;
+    padding: 20px;
+}
